@@ -1,0 +1,32 @@
+// full spaces
+%fullspace{
+    width: 100%;
+    height: 100%;
+}
+
+// general styles
+@font-face {
+    font-family: "Sahel";
+    src: url("../../fonts/Sahel.eot");
+    src: url("../../fonts/Sahel.ttf") format("truetype"), url("../../fonts/Sahel.woff") format("woff");
+    font-weight: normal;
+}
+@font-face {
+    font-family: "Nastaliq";
+    src: url("../../fonts/IranNastaliq.ttf") format("truetype");
+    font-weight: normal;
+}
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html{
+    direction: rtl
+}
+
+body{
+    background: $color-dark;
+}

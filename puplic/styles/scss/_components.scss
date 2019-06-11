@@ -1,0 +1,207 @@
+.hamburger-menu{
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    top: 10%;
+    right: 5%;
+    z-index: 300;
+
+    @media (max-width: 600px){
+        width: 30px;
+        height: 30px;
+
+    }
+    
+    .menu{
+        &__secondary{
+            
+
+        
+        }
+        &__secondary{
+            
+
+            
+        }
+        &__green{
+
+        }
+        @extend %fullspace;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around; 
+        cursor: pointer;
+        transition: transform 0.5s;
+
+        &-line{
+            width: 100%;
+            height: 4px;
+            background: $color-primary;
+            transition: all 0.5s 0.5s;
+            transform-origin: right;
+        }
+    }
+}
+
+.logo{
+    color: $color-primary;
+    font-size: 70px;
+    display: block;
+    width: 110px;
+    height: 110px;
+    border: 1px solid $color-primary;
+    border-radius: 50%;
+    margin: auto;
+
+    i{
+        position: relative;
+        top: 20px;
+    }
+}
+
+.main-name{
+    font-family: $font-sahel;
+    font-size: 40px;
+    color: $color-secondary;
+    @include textStyles;
+
+    @media (max-width: 600px){
+        font-size: 30px; 
+    }
+}
+
+.sub-name{
+    font-family: $font-sahel;
+    font-size: 15px;
+    color: $color-secondary;
+    @include textStyles;
+
+    @media (max-width: 600px){
+        font-size: 10px; 
+    }
+}
+
+.main-heading{
+    font-family: $font-nastaliq;
+    font-size: 100px;
+    font-weight: 300;
+    color: $color-primary;
+    margin-bottom: 30px;
+
+    @media (max-width: 600px){
+        font-size: 60px; 
+    }
+}
+
+.sub-heading{
+    font-family:$font-sahel;
+    font-size: 50px;
+    font-weight: 300;
+    color: $color-secondary;
+    margin-bottom: 40px;
+
+    @media (max-width: 600px){
+        font-size: 30px; 
+    }
+}
+
+.main-btn{
+    padding: 10px 25px;
+    margin-bottom: 40px;
+    font-family: $font-sahel;
+    font-size: 18px;
+    cursor: pointer;
+    color: $color-black;
+    background: $color-primary;
+    border: none;
+    border-radius: 5px;
+    transition: all 0.5s;
+
+    @media (max-width: 600px){
+        padding: 7px 20px;
+        font-size: 14px; 
+    }
+
+
+     &:hover{
+         padding: 10px 50px;
+         transition: all 0.5s;
+     }
+}
+
+.card{
+    width: 33.3333%;
+    height: 30vw;
+    position: relative;
+    overflow: hidden;
+
+    &:hover .card-overly{
+        left: 0;
+    }
+    
+    &-overly{
+        @extend %fullspace;
+        @include flexLayout;
+        flex-direction: column;
+        position: absolute;
+        top: 0;
+        left: -100%;
+        background: rgba($color-primary, 0.6);
+        color: $color-white;
+        z-index: 10;
+        transition: left .5s;
+
+        &-heading{
+            @include textStyles; 
+            font-family: $font-nastaliq;
+            font-size: 60px;
+
+            @media (max-width: 600px){
+                font-size: 30px;
+            }
+        }
+
+        &-desc{
+            @include textStyles; 
+            font-family: $font-sahel;
+            font-size: 20px;
+            margin-bottom: 30px;
+
+            @media (max-width: 600px){
+                font-size: 10px;
+            }
+        }
+
+        &-btn{
+            width: 150px;
+            height: 40px;
+            color: $color-primary;
+            background: $color-white;
+            font-family: $font-sahel;
+            font-size: 14px;
+            cursor: pointer;
+            border-radius: 30px;
+            border: 1px solid $color-primary;
+            transition: all .5s;
+
+            @media (max-width: 600px){
+                width: 100px;
+                height: 30px;
+                font-size: 10px; 
+            }
+
+
+            &:hover{
+                border-radius: 5px;
+                transition: all 0.6;
+            }
+        }
+    }
+
+    &-img{
+        @extend %fullspace;
+        object-fit: cover;
+        opacity: 0.9;
+    }
+}
+
